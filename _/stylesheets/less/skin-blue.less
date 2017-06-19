@@ -1,0 +1,1047 @@
+/* Skin Guide
+-------------------------------------------------------------------------------*/
+
+/* Backgrounds */
+@headerBg1 : #1799D6;
+@headerBg2 : #1578a7;
+
+@subHeaderBg1 : #67b6db;
+@subHeaderBg2 : #4b99bd;
+
+@headerBgReverse1 : #1691cb;
+@headerBgReverse2 : #0076b2;
+
+@focusBg : #FFE3CC;
+
+/* Buttons */
+@btn : #FF7A00;
+@btnHover: #b15500;
+
+@btnGrad1 : #ff963a;
+@btnGrad2 : #ff7700;
+@btnGradHover : #ffa14b;
+@btnBorder : #ff8f28;
+
+/* Text */
+@defaultText : #545454;
+@whiteText : #ffffff;
+@strongText : #0f6790;
+
+/* Inputs */
+.ang-input {
+	background: @whiteText;
+    border: 1px solid @defaultBorder;
+    color: @defaultText;
+}
+.ang-inputFocus {
+	border: 1px solid @btn;
+    background:@focusBg;
+}
+
+/* Misc */
+@defaultBorder : #cccccc;
+@topBarBorder1 : #36a6da;
+
+
+
+/* Typography defaults
+-------------------------------------------------------------------------------*/
+
+/* new Linux- and Windows-friendly sans-serif font stack: http://mky.be/fontstack */
+body {font: 13px/20px Helmet, Freesans, sans-serif; background:@headerBg1;}
+
+/* off-black better for text */
+body, select, input, textarea {color: @defaultText;}
+
+/* Custom text-selection colors (also remove any text shadows) */
+::-moz-selection{background: @headerBg1; color: #fff; text-shadow: none;}
+::selection {background: @headerBg1; color: #fff; text-shadow: none;} 
+
+a {color: @btn;font-size: 100%;text-decoration:none;}
+a:hover {color: @btnHover;}
+
+/*	j.mp/webkit-tap-highlight-color */
+a:link {-webkit-tap-highlight-color: @btnHover;} 
+
+strong {
+	font-weight:bold;
+	color:@strongText;
+}
+hr {
+	border-top: 1px solid @defaultBorder;
+}
+input[type="text"], input[type="password"], input[type="email"], input[type="date"], input[type="file"], textarea, select {
+    .ang-input;
+}
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, textarea:focus {
+    .ang-inputFocus;
+}
+input.success, div.ang-success {
+	background:#d4fdcc;
+	border-color:#84c178;
+}
+input.error, div.ang-error {
+	background:#ffcbc9;
+	border-color:#d29896;
+}
+span.ang-error {
+	color:#c25f5b;
+	margin:0 0 0 5px;
+	font-size:11px;
+	font-weight:bold;
+	text-transform: uppercase;
+}
+
+
+/* General Layout
+-------------------------------------------------------------------------------*/
+
+body {
+	background:url(../../img/bg/body.png) repeat 0 0;
+}
+
+/* Button defaults */
+
+a.ang-button, button, input[type="submit"], input[type="reset"], input[type="button"], select {
+	background: @btnGrad1;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmOTYzYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZjc3MDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  @btnGrad1 0%, @btnGrad2 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@btnGrad1), color-stop(100%,@btnGrad2));
+	background: -webkit-linear-gradient(top,  @btnGrad1 0%,@btnGrad2 100%);
+	background: -o-linear-gradient(top,  @btnGrad1 0%,@btnGrad2 100%);
+	background: -ms-linear-gradient(top,  @btnGrad1 0%,@btnGrad2 100%);
+	background: linear-gradient(top,  @btnGrad1 0%,@btnGrad2 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@btnGrad1', endColorstr='@btnGrad2',GradientType=0 );
+    border-color: @btnBorder;
+    color: @whiteText;
+    text-shadow: 1px 1px 1px #000000;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 21px;
+    padding: 4px 12px;
+    text-decoration: none;
+}
+a.ang-button:hover, button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover, select:hover {
+	background: @btn;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmN2EwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmExNGIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  @btn 0%, @btnGradHover 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@btn), color-stop(100%,@btnGradHover));
+	background: -webkit-linear-gradient(top,  @btn 0%,@btnGradHover 100%);
+	background: -o-linear-gradient(top,  @btn 0%,@btnGradHover 100%);
+	background: -ms-linear-gradient(top,  @btn 0%,@btnGradHover 100%);
+	background: linear-gradient(top,  @btn 0%,@btnGradHover 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@btn', endColorstr='@btnGradHover',GradientType=0 );
+    border-color: @btnBorder;
+}
+a.ang-grey, button.ang-grey {
+	background: #f2f2f2;
+	background: -moz-linear-gradient(top,  #f2f2f2 50%, @defaultBorder 99%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(50%,#f2f2f2), color-stop(99%,@defaultBorder));
+	background: -webkit-linear-gradient(top,  #f2f2f2 50%,@defaultBorder 99%);
+	background: -o-linear-gradient(top,  #f2f2f2 50%,@defaultBorder 99%);
+	background: -ms-linear-gradient(top,  #f2f2f2 50%,@defaultBorder 99%);
+	background: linear-gradient(top,  #f2f2f2 50%,@defaultBorder 99%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='@defaultBorder',GradientType=0 );
+    border-color: @defaultBorder #AAAAAA #AAAAAA @defaultBorder;
+    color: #444444;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.75);
+    box-shadow: none;
+}
+a.ang-grey:hover, button.ang-grey:hover {
+	background: #e0e0e0;
+	background: -moz-linear-gradient(top,  #e0e0e0 50%, #bfbfbf 99%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(50%,#e0e0e0), color-stop(99%,#bfbfbf));
+	background: -webkit-linear-gradient(top,  #e0e0e0 50%,#bfbfbf 99%);
+	background: -o-linear-gradient(top,  #e0e0e0 50%,#bfbfbf 99%);
+	background: -ms-linear-gradient(top,  #e0e0e0 50%,#bfbfbf 99%);
+	background: linear-gradient(top,  #e0e0e0 50%,#bfbfbf 99%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e0e0', endColorstr='#bfbfbf',GradientType=0 );
+    border-color: #AAAAAA #888888 #888888 #AAAAAA;
+    color: #222222;
+    box-shadow: none;
+}
+a.ang-green, .ang-green {
+	background: #59bf00;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzU5YmYwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyMTk5MDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  #59bf00 0%, #219900 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#59bf00), color-stop(100%,#219900));
+	background: -webkit-linear-gradient(top,  #59bf00 0%,#219900 100%);
+	background: -o-linear-gradient(top,  #59bf00 0%,#219900 100%);
+	background: -ms-linear-gradient(top,  #59bf00 0%,#219900 100%);
+	background: linear-gradient(top,  #59bf00 0%,#219900 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#59bf00', endColorstr='#219900',GradientType=0 );
+	border-color:#278C00;
+}
+a.ang-green:hover, .ang-green:hover {
+	background: #1d8c1c;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIxJSIgc3RvcC1jb2xvcj0iIzFkOGMxYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzNmMxNDgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  #1d8c1c 1%, #36c148 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#1d8c1c), color-stop(100%,#36c148));
+	background: -webkit-linear-gradient(top,  #1d8c1c 1%,#36c148 100%);
+	background: -o-linear-gradient(top,  #1d8c1c 1%,#36c148 100%);
+	background: -ms-linear-gradient(top,  #1d8c1c 1%,#36c148 100%);
+	background: linear-gradient(top,  #1d8c1c 1%,#36c148 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d8c1c', endColorstr='#36c148',GradientType=0 );
+	border-color:#278C00;
+}
+a.ang-red, .ang-red {
+	background: #c90407;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2M5MDQwNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM5NjAwMDIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  #c90407 0%, #960002 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c90407), color-stop(100%,#960002));
+	background: -webkit-linear-gradient(top,  #c90407 0%,#960002 100%);
+	background: -o-linear-gradient(top,  #c90407 0%,#960002 100%);
+	background: -ms-linear-gradient(top,  #c90407 0%,#960002 100%);
+	background: linear-gradient(top,  #c90407 0%,#960002 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c90407', endColorstr='#960002',GradientType=0 );
+	border-color:#9D0103;
+}
+a.ang-red:hover, .ang-red:hover {
+	background: #960000;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzk2MDAwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijk5JSIgc3RvcC1jb2xvcj0iI2Q2MDgwOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+	background: -moz-linear-gradient(top,  #960000 0%, #d60808 99%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#960000), color-stop(99%,#d60808));
+	background: -webkit-linear-gradient(top,  #960000 0%,#d60808 99%);
+	background: -o-linear-gradient(top,  #960000 0%,#d60808 99%);
+	background: -ms-linear-gradient(top,  #960000 0%,#d60808 99%);
+	background: linear-gradient(top,  #960000 0%,#d60808 99%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#960000', endColorstr='#d60808',GradientType=0 );
+	border-color:#9D0103;
+}
+a.ang-yellow, .ang-yellow {
+	background: #fcdc28;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZjZGMyOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlOGI0MGIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  #fcdc28 0%, #e8b40b 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcdc28), color-stop(100%,#e8b40b));
+	background: -webkit-linear-gradient(top,  #fcdc28 0%,#e8b40b 100%);
+	background: -o-linear-gradient(top,  #fcdc28 0%,#e8b40b 100%);
+	background: -ms-linear-gradient(top,  #fcdc28 0%,#e8b40b 100%);
+	background: linear-gradient(top,  #fcdc28 0%,#e8b40b 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcdc28', endColorstr='#e8b40b',GradientType=0 );
+	border-color:#EFD002;
+}
+a.ang-yellow:hover, .ang-yellow:hover {
+	background: #e8b40b;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U4YjQwYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmY2RjMjgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  #e8b40b 0%, #fcdc28 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e8b40b), color-stop(100%,#fcdc28));
+	background: -webkit-linear-gradient(top,  #e8b40b 0%,#fcdc28 100%);
+	background: -o-linear-gradient(top,  #e8b40b 0%,#fcdc28 100%);
+	background: -ms-linear-gradient(top,  #e8b40b 0%,#fcdc28 100%);
+	background: linear-gradient(top,  #e8b40b 0%,#fcdc28 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8b40b', endColorstr='#fcdc28',GradientType=0 );
+	border-color:#EFD002;
+}
+
+.ang-mGradient {
+	background: @headerBg1;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI0NCUiIHN0b3AtY29sb3I9IiMxNzk5ZDYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMTU3OGE3IiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+	background: -moz-linear-gradient(top,  @headerBg1 44%, @headerBg2 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(44%,@headerBg1), color-stop(100%,@headerBg2));
+	background: -webkit-linear-gradient(top,  @headerBg1 44%,@headerBg2 100%);
+	background: -o-linear-gradient(top,  @headerBg1 44%,@headerBg2 100%);
+	background: -ms-linear-gradient(top,  @headerBg1 44%,@headerBg2 100%);
+	background: linear-gradient(top,  @headerBg1 44%,@headerBg2 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@headerBg1', endColorstr='@headerBg2',GradientType=0 );
+}
+
+.ang-sGradient {
+	background: @subHeaderBg1;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzY3YjZkYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM0Yjk5YmQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  @subHeaderBg1 0%, @subHeaderBg2 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@subHeaderBg1), color-stop(100%,@subHeaderBg2));
+	background: -webkit-linear-gradient(top,  @subHeaderBg1 0%,@subHeaderBg2 100%);
+	background: -o-linear-gradient(top,  @subHeaderBg1 0%,@subHeaderBg2 100%);
+	background: -ms-linear-gradient(top,  @subHeaderBg1 0%,@subHeaderBg2 100%);
+	background: linear-gradient(top,  @subHeaderBg1 0%,@subHeaderBg2 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@subHeaderBg1', endColorstr='@subHeaderBg2',GradientType=0 );
+}
+.ang-mGradientR {
+	background: @headerBgReverse1;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIzOSUiIHN0b3AtY29sb3I9IiMxNjkxY2IiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDA3NmIyIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+	background: -moz-linear-gradient(top,  @headerBgReverse1 39%, @headerBgReverse2 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(39%,@headerBgReverse1), color-stop(100%,@headerBgReverse2));
+	background: -webkit-linear-gradient(top,  @headerBgReverse1 39%,@headerBgReverse2 100%);
+	background: -o-linear-gradient(top,  @headerBgReverse1 39%,@headerBgReverse2 100%);
+	background: -ms-linear-gradient(top,  @headerBgReverse1 39%,@headerBgReverse2 100%);
+	background: linear-gradient(top,  @headerBgReverse1 39%,@headerBgReverse2 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@headerBgReverse1', endColorstr='@headerBgReverse2',GradientType=0 );
+}
+
+/* Top Bar */
+
+#ang-topBar {
+	box-shadow: 2px 0 3px #333333;
+}
+
+/* Topbar Notification icon */
+#ang-notificationIcon {
+	border-right:1px solid @topBarBorder1;
+}
+#ang-notificationIcon > a {
+	background:#000000 !important;
+}
+#ang-notificationIcon > a > span {
+	color:@whiteText;
+}
+#ang-popNotificationIconContent > a {
+	color:@whiteText;
+	border-bottom:1px solid @topBarBorder1;
+	border-top:1px solid @strongText;
+	color:@whiteText;
+}
+#ang-popNotificationIconContent a:hover {
+	background-color:@headerBgReverse1;
+}
+
+/* Top bar module name and icon*/
+#ang-topBar > h1#ang-moduleIcon {
+	border-left:1px solid @strongText;
+	border-right:1px solid @topBarBorder1;
+}
+#ang-topBar > h1#ang-moduleIcon.mentorModule > a {
+	background:url(../../img/icons/moduleIconMentor.png) no-repeat 5px 3px;
+	border-right:1px solid @strongText;
+	color:@whiteText;
+}
+#ang-topBar h1#ang-moduleIcon a:hover {
+	background-color:@headerBgReverse1;
+}
+#ang-popModuleIconContent > a {
+	color:@whiteText;
+	border-bottom:1px solid @topBarBorder1;
+	border-top:1px solid @strongText;
+	color:@whiteText;
+}
+/* individual module icons */
+#ang-popModuleIconContent > a.ang-coreModule {
+	background:url(../../img/icons/moduleIconCore.png) no-repeat 5px 3px;
+}
+#ang-popModuleIconContent > a.ang-mentorModule {
+	background:url(../../img/icons/moduleIconCore.png) no-repeat 5px 3px;
+}
+#ang-popModuleIconContent > a.ang-travelModule {
+	background:url(../../img/icons/moduleIconCore.png) no-repeat 5px 3px;
+}
+#ang-popModuleIconContent > a.ang-intellectsModule {
+	background:url(../../img/icons/moduleIconCore.png) no-repeat 5px 3px;
+}
+#ang-popModuleIconContent > a.ang-profModule {
+	background:url(../../img/icons/moduleIconCore.png) no-repeat 5px 3px;
+}
+#ang-popModuleIconContent a:hover {
+	background-color:@headerBgReverse1;
+}
+
+#ang-topBar > ul li {
+	border-right:1px solid @topBarBorder1;
+}
+#ang-topBar > ul li.ang-first-child {
+	border-left:1px solid @strongText;
+}
+#ang-topBar > ul li a {
+	border-right:1px solid @strongText;
+}
+#ang-topBar a:hover {
+	background-color:@headerBgReverse1;
+}
+#ang-topBar > ul li a.ang-current {
+	background-color:@headerBgReverse1;
+}
+#ang-navHover > span {
+	color:@whiteText;
+	text-shadow: 1px 1px 1px #555555;
+}
+
+/* Topbar search */
+#ang-topBarSearch form input {
+	background: white;
+}
+
+/* Topbar login */
+#ang-login {
+	border-left:1px solid @topBarBorder1;
+}
+#ang-login a {
+	border-left:1px solid @strongText;
+	color: @whiteText;
+}
+#ang-popLoginContent > a {
+	color:@whiteText;
+	border-bottom:1px solid @topBarBorder1;
+	border-top:1px solid @strongText;
+	color:@whiteText;
+}
+#ang-popLoginContent a:hover {
+	background-color:@headerBgReverse1;
+}
+
+/* Sidebar */
+
+#ang-sidebar {
+	background:url(../../img/bg/black.png) repeat 0 0 #2d2c2c;
+}
+#ang-sidebar p {
+	color:@whiteText;
+}
+#ang-sidebar a {
+	color:@headerBg1;
+}
+#ang-sidebar a:hover {
+	color:@topBarBorder1;
+}
+#ang-sidebar .ang-highlight {
+	color:#FCC83F;
+}
+#ang-userPic {
+	border:2px solid #383737;
+}
+.ang-overlayBtns a {
+	color:@whiteText !important;
+}
+.ang-overlayBtns a:hover {
+	color:@whiteText !important;
+}
+.ang-sbDivider {
+	background:#383737;
+}
+.ang-sbActions a {
+	background:#383737;
+}
+#ang-userDetails > div {
+	background:#383737;
+}
+#ang-userDetails > div h1 {
+	color:@whiteText;
+}
+#ang-userDetails > div dl dt {
+	color:@headerBg1;
+}
+#ang-userDetails > div dl dd {
+	color:@whiteText;
+}
+#ang-userDetails > div span {
+	color:@whiteText;
+	display:block;
+}
+#ang-userLocation img {
+	border:2px solid @headerBg1;
+}
+
+#ang-mentorBadge {
+	background: @headerBg1;
+	color: white;
+}
+
+/* Panels */
+
+.ang-panel {
+	background:url(../../img/bg/grey.png) repeat 0 0 #eef2f2;
+}
+.ang-pHeader h1 {
+	color:@whiteText;
+	text-shadow:1px 1px 1px #555555;
+}
+.ang-panel dl dt {
+	color:@strongText;
+}
+.ang-panelFull {
+	background:url(../../img/bg/grey.png) repeat 0 0 #eef2f2;
+}
+.ang-panelWide {
+	background:url(../../img/bg/grey.png) repeat 0 0 #eef2f2;
+}
+.ang-panelHalf {
+	background:url(../../img/bg/grey.png) repeat 0 0 #eef2f2;
+}
+.ang-panelThird {
+	background:url(../../img/bg/grey.png) repeat 0 0 #eef2f2;
+}
+
+/* Lightboxes */
+
+.ang-lbContainer {
+	background:url(../../img/bg/trans-70.png) repeat 0 0;
+}
+.ang-lbContainer .ang-content > div {
+	background:@whiteText;
+}
+.ang-lbContainer > .ang-lbHide {
+	background: @btnGrad1;
+}
+.ang-lbFade {
+	background:#000000;
+}
+#ang-lbEventView hgroup {
+	border-bottom:1px solid @defaultBorder;
+}
+#ang-lbEventView hgroup > span {
+	background: #ECECEC;
+	border: 1px solid #CCC;
+}
+#ang-lbRequestDetails hgroup > span {
+	background: #ECECEC;
+	border: 1px solid #CCC;
+}
+
+/* Login Page
+-------------------------------------------------------------------------------*/
+
+
+.ang-loginContent {
+	background:url(../../img/bg/black.png) repeat 0 0 #2d2c2c;
+}
+.ang-loginContent a {
+	color:@headerBg1;
+}
+.ang-loginContent a.ang-button, .ang-loginContent a.ang-button:hover {
+	color:@whiteText;
+}
+.ang-loginContent a:hover {
+	color:#41B3E7;
+}
+.ang-loginLogo h1 {
+	color:@headerBg1;
+}
+
+
+/* Profile
+-------------------------------------------------------------------------------*/
+
+/* Tabs */
+
+#ang-profileTabs ul {
+	border-bottom:2px solid #2D2C2C;
+}
+#ang-profileTabs ul li {
+	background: url(../../img/bg/black.png) repeat 0 0 #2D2C2C;
+	border-right:1px solid #585858;
+	padding:0 1px 0 0;
+}
+#ang-profileTabs ul li a {
+	color:@whiteText;
+	border-right:1px solid #000000;
+}
+#ang-profileTabs ul li a:hover, #ang-profileTabs ul li a.ang-current {
+	color:@btn;
+}
+
+/* Status */
+
+#ang-status {
+	background:url(../../img/bg/grey.png) repeat 0 0 #eef2f2;
+}
+#ang-status ul li span {
+	border: 1px solid @headerBg1;
+	color:@whiteText;
+	text-shadow:1px 1px 1px #555555;
+}
+
+/* Member's status panel */
+
+#ang-memberStatus {
+	background:url(../../img/bg/black.png) repeat 0 0 #2d2c2c;
+}
+#ang-memberStatus h1 {
+	color:@whiteText;
+}
+#ang-memberStatus h1 strong {
+	color:@headerBg1;
+}
+#ang-memberStatus > a {
+	color:@whiteText;
+}
+#ang-memberStatus > a span {
+	color:@btn;
+}
+
+/* Employment */
+
+#ang-employmentNav > a.ang-recent {
+	background:url(../../img/icons/white-arrow-left.png) no-repeat center 13px @btn;
+}
+#ang-employmentNav > a.ang-older {
+	background:url(../../img/icons/white-arrow-right.png) no-repeat center 13px @btn;
+}
+#ang-employmentNav ul li a.ang-current {
+	color:@strongText;
+}
+.ang-employer h1 {
+	color:@strongText;
+	border-top:1px solid @defaultBorder;
+}
+
+/* Location */
+
+#ang-pSlocation img {
+	border:2px solid @btn;
+}
+
+/* Footer */
+
+#ang-footer {
+	box-shadow: -2px 0 3px #333333;
+}
+#ang-footer span, #ang-footer a {
+	color:@whiteText;
+}
+#ang-footer a:hover {
+	color:#0c4e6d;
+}
+
+/* Profile Edit
+-------------------------------------------------------------------------------*/
+
+.ang-editMode > form > div {
+	border-bottom:1px solid @defaultBorder;
+}
+
+
+
+/* Search
+-------------------------------------------------------------------------------*/
+
+
+/* Year */
+
+#ang-accordionContainer > li h1 {
+	color:@whiteText;
+	text-shadow: 1px 1px 1px #555555;
+}
+#ang-accordionContainer > li dl dt {
+	background:#2d2c2c;
+}
+#ang-accordionContainer > li dl dt a {
+	color:@whiteText;
+}
+#ang-accordionContainer > li dl dt a span {
+	color: @btn;
+}
+#ang-accordionContainer > li dl dt:hover {
+	background:#3F3F3F;
+}
+#ang-accordionContainer > li dl dt.ang-odd {
+	background:#121212;
+	color:@whiteText;
+}
+#ang-accordionContainer > li dl dt.ang-odd:hover {
+	background:#2d2c2c;
+}
+#ang-accordionContainer > li dl dd {
+	background:@btn;
+}
+#ang-accordionContainer > li dl dd a {
+    color:@whiteText;
+}
+
+/* Occupation */
+
+#ang-pSoccupation div h1 {
+	color:@whiteText;
+	text-shadow: 1px 1px 1px #555555;
+}
+#ang-pSoccupation dl dt {
+	background: url(../../img/bg/trans-10.png) repeat 0 0;
+}
+#ang-pSoccupation dl dt a {
+	color:@defaultText !important;
+}
+#ang-pSoccupation dl dt:hover {
+	background: url(../../img/bg/trans-70.png) repeat 0 0;
+	color:@whiteText !important;
+}
+#ang-pSoccupation dl dt:hover a {
+	color:@whiteText !important;
+}
+
+
+
+
+#ang-pSoccupation dl dd {
+	background:@btn;
+}
+#ang-pSoccupation dl dd a {
+    color:@whiteText;
+}
+#ang-pSoccupation dl dt a {
+	color:@whiteText;
+}
+
+/* Results
+-------------------------------------------------------------------------------*/
+
+.ang-rDetails h1 {
+	color:@btn;
+}
+.ang-result {
+	border-bottom: 1px solid @defaultBorder;
+}
+.ang-result .ang-rDetails {
+	border-right: 1px solid @defaultBorder;
+}
+#ang-keywordSearch > div {
+	border-top:1px solid @defaultBorder;
+}
+#ang-keywordSearch option {
+	color:@defaultText;
+}
+
+/* Dashboard
+-------------------------------------------------------------------------------*/
+
+/* Activity Feed */
+
+#ang-feed li {
+	color: @whiteText;
+}
+#ang-feed li.ang-odd {
+	background: #000000;
+}
+#ang-feed li > div h2 {
+	color: @headerBg1 !important;
+}
+
+/* Mentor Stats */
+
+#ang-mentorStats h2 {
+	color: @whiteText;
+}
+#ang-mentorStats a strong {
+	color: #A868BC;
+}
+#ang-mentorStats a:hover {
+	background: #000000;
+}
+
+/* Decade Stats */
+
+#ang-pDecade #ang-decades .ang-pContent h1 {
+	color:#757575;
+}
+#ang-pDecade .ang-decadesCol {
+	border-right:1px solid @defaultBorder;
+}
+.ang-decadesCol dl dd div > div {
+	background:@btn;
+}
+
+/* Account Settings
+-------------------------------------------------------------------------------*/
+
+.ang-pContent label {
+	color:@strongText;
+}
+.ang-currentPhoto {
+	border:1px solid @strongText;
+}
+#ang-picProgress {
+	background: #D4FDCC;
+    border-color: #84C178;
+}
+.ang-picBar {
+	background:#84C178;
+}
+
+/* Inbox
+-------------------------------------------------------------------------------*/
+
+#ang-inboxNav {
+	background:url(../../img/bg/black.png) repeat 0 0 #2d2c2c;
+}
+#ang-inboxNav h1 {
+	color:@whiteText;
+}
+#ang-inboxNav h1 strong {
+	color:@headerBg1;
+}
+#ang-inboxNav > a {
+	color:@whiteText;
+}
+#ang-inboxNav > a span {
+	color:@btn;
+}
+#ang-pInbox table th {
+    border-bottom: 1px solid @whiteText;
+}
+#ang-pInbox table td {
+	background: none repeat scroll 0 0 @defaultText;
+    border-bottom: 1px solid @whiteText;
+    color: @whiteText;
+}
+#ang-pInbox table tr:hover td {
+	background:#121212;
+}
+#ang-pInbox table tr.ang-inboxUnread td {
+	background:#121212;
+}
+.ang-inboxMessage {
+	border-top:1px solid @defaultBorder;
+}
+
+
+/* Compose Lightbox */
+
+#ang-lbInbox > .ang-content {
+	background:@whiteText;
+}
+
+/* Mentor Profile
+-------------------------------------------------------------------------------*/
+
+/* Status */
+
+#ang-mentorStatus {
+	background:url(../../img/bg/black.png) repeat 0 0 #2d2c2c;
+}
+#ang-mentorStatus h1 {
+	color:@whiteText;
+}
+#ang-mentorStatus h1 strong {
+	color:#a868bc;
+}
+#ang-mentorStatus > a {
+	color:@whiteText;
+}
+#ang-mentorStatus > a span {
+	color:#a868bc;
+}
+#ang-mentorTags {
+	background:url(../../img/bg/grey.png) repeat 0 0 #eef2f2;
+}
+#ang-mentorTags ul li span {
+	color:@whiteText;
+	text-shadow:1px 1px 1px #555555;
+}
+.ang-tagList ul li {
+	background: @defaultText;
+	color: @whiteText;
+}
+.ang-tagList ul li span {
+	background: url(../../img/icons/cancelMentor.png) no-repeat center 3px #920000;
+}
+
+
+
+
+
+
+
+
+/* ----------New Mentor Dashboard ----------*/
+
+#ang-dashboardIntro {
+	background:url(../../img/bg/black.png) repeat 0 0 #2d2c2c;
+	color:@whiteText;
+}
+#ang-activityFeed li {
+	background:@defaultBorder;
+}
+#ang-activityFeed li.ang-tagMentor {
+	background:url(../../img/icons/feed-mentor.png) no-repeat 7px 7px @headerBg1;
+}
+#ang-activityFeed li.ang-tagMessage {
+	background:url(../../img/icons/feed-message.png) no-repeat 7px 7px #1d8c1c;
+}
+
+.ang-largeMentorFeed li {
+	background:url(../../img/bg/trans-10.png) repeat 0 0;
+	border:1px solid #B8B8B8;
+}
+
+
+/* Mentor Boxes (Generic) */
+
+.ang-mentorBox > div > p, .ang-mentorBox > div > em {
+	color: @defaultText;
+}
+
+/* Mentor Boxes (Generic) - Active */
+
+.ang-mentorBox.ang-active {
+	background: url(../../img/bg/trans-10.png) repeat 0 0;
+	border:1px solid #B8B8B8;
+}
+.ang-mentorBox.ang-active:hover {
+	background: #000000;
+}
+.ang-mentorBox.ang-active > img {
+	border: 1px solid #B8B8B8;
+}
+
+
+/* Mentor Boxes (Generic) - Cancelled */
+
+.ang-mentorBox.ang-cancelled {
+	background: url(../../img/bg/trans-70.png) repeat 0 0;
+}
+.ang-mentorBox.ang-cancelled:hover {
+	background: #121212;
+}
+.ang-mentorBox.ang-cancelled > img {
+	border: 1px solid #000000;
+}
+
+/* Mentor Boxes (Generic) - Finished */
+
+.ang-mentorBox.ang-finished {
+	background: url(../../img/bg/trans-10.png) repeat 0 0;
+}
+.ang-mentorBox.ang-finished:hover {
+	background: url(../../img/bg/trans-70.png) repeat 0 0;
+}
+.ang-mentorBox.ang-finished:hover div p {
+	color:@whiteText !important;
+}
+.ang-mentorBox.ang-finished > img {
+	border: 1px solid #278C00;
+}
+
+/* Mentor Box Actions */
+
+.ang-mRatings {
+	border-left: 1px solid #878787;
+}
+.ang-mRatings > span {
+	text-shadow: 1px 1px 1px @defaultText;
+}
+.ang-mRatings {
+	border-left: 1px solid #878787;
+}
+.ang-mRatings > span {
+	text-shadow: 1px 1px 1px #545454;
+}
+.ang-result .ang-rActions {
+	border-left: 1px solid #CCC;
+}
+
+/* Mentor Sidebar Box */
+
+.ang-sbMentorBox > div {
+	color:@whiteText;
+}
+
+
+/* ---------- Travel Dashboard ----------*/
+
+#ang-travelMap {
+	border:2px solid #000000;
+}
+
+/* Featured Guide */
+
+.ang-featuredAuthor {
+	border-top:1px solid @defaultBorder;
+}
+
+
+/* ---------- Travel Profile ----------*/
+
+.ang-switch-label {
+	color: #545454;
+}
+.ang-switch-input:checked + .ang-switch-label {
+	color: #ffffff;
+  	text-shadow: 1px 1px 1px #000000;
+}
+.ang-switch-selection {
+	background-color: #65bd63;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9dd993), color-stop(100%, #65bd63));
+    background-image: -webkit-linear-gradient(top, #9dd993, #65bd63);
+    background-image: -moz-linear-gradient(top, #9dd993, #65bd63);
+    background-image: -ms-linear-gradient(top, #9dd993, #65bd63);
+    background-image: -o-linear-gradient(top, #9dd993, #65bd63);
+    background-image: linear-gradient(top, #9dd993, #65bd63);
+}
+/* Group Boxes (Generic) - Finished */
+
+.ang-groupBox {
+	background: url(../../img/bg/trans-10.png) repeat 0 0;
+}
+.ang-groupBox:hover {
+	background: url(../../img/bg/trans-70.png) repeat 0 0;
+}
+.ang-groupBox:hover div p {
+	color:@whiteText !important;
+}
+.ang-groupBox > div > p, .ang-groupBox > div > em {
+	color:@defaultText !important;
+}
+
+/* ---------- Travel Explore ----------*/
+
+.ang-searchBigCategory ul li a {
+	color:@defaultText;
+	background: url(../../img/bg/trans-10.png) repeat 0 0;
+}
+.ang-searchBigCategory ul li a:hover {
+	background: url(../../img/bg/trans-70.png) repeat 0 0;
+	color:@whiteText !important;
+}
+
+/* ---------- Travel Events ----------*/
+
+#ang-EventList th {
+	color:@whiteText;
+}
+#ang-EventList thead, #ang-EventList tfoot {
+	background: url(../../img/bg/black.png) repeat 0 0 #2D2C2C;
+}
+#ang-EventList tfoot td {
+	color:@whiteText;
+}
+#ang-EventList tbody {
+	background: url(../../img/bg/trans-10.png) repeat 0 0;
+}
+#ang-EventList td {
+	color: @defaultText;
+	border-top: 1px dashed @whiteText;
+}
+#ang-EventList td.ang-tdHovered {
+	color:@whiteText;
+	background:@btn;
+}
+
+#ang-sbFilterAccord > li > a {
+	background: url("../../img/icons/sb-arrow-down.png") no-repeat 230px 16px #383737;
+	color:@whiteText;
+}
+#ang-sbFilterNoAccord > li > a {
+	background: #383737;
+	color:@whiteText;
+}
+#ang-sbFilterAccord > li > a:hover, #ang-sbFilterAccord > li.ui-state-active > a {
+	background: url("../../img/icons/sb-arrow-down.png") no-repeat 230px 16px #424242;
+}
+#ang-sbFilterAccord > li.ui-state-active > a {
+	background: url("../../img/icons/sb-arrow-up.png") no-repeat 230px 16px #424242;
+	color: @headerBg1;
+}
+.ang-sbOptionsList li span {
+	background:#424242;
+	color:@whiteText;
+}
+
+.ang-sbMainHeading {
+	color: @whiteText;
+}
+
+
+/* Travel Groups Profile
+-------------------------------------------------------------------------------*/
+
+
+#ang-groupHeaderTitle {
+	background: url(../../img/bg/trans-70.png) repeat 0 0;
+}
+#ang-groupHeaderTitle h1 {
+	color:@whiteText;
+}
+
+.ang-groupEventFeed li {
+	background: url(../../img/bg/trans-10.png) repeat 0 0;
+}
